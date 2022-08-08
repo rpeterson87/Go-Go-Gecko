@@ -11,19 +11,49 @@
     border: 5px solid blue;
 }
 
-.character{
+.character {
     width: 10px;
     height: 20px;
     position: relative;
     top: 480px;
     background-color: black;
+    animation-name: jump;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
 }
 
-.object{
+/* should be able to use top to animate up and down. tested on object  */
+@keyframes jump {
+    from {top: 0px;
+    background-color: yellowgreen;}
+    to {top: 200px;}
+}
+/* Need to add animation - found https://www.w3schools.com/css/css3_animations.asp */
+
+.object {
     width: 10px;
     height: 20px;
     position: relative;
     top: 460px;
     left: 890px;
     background-color: dimgrey;
+    animation-name: object;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+
+}
+
+/* can send objects from the top corners at the player using top: 0px Might want to add that feature? */
+@keyframes object {
+    0% {
+        left: 900px;
+        background-color: yellow;
+    }
+
+    /* this at anything lower then 100% makes a pong affect */
+    100% {
+        left: -80px;
+    }
 }
