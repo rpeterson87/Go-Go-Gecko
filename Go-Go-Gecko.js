@@ -16,12 +16,19 @@
 
 //* Variables
 const goGoGecko = document.querySelector('.character');
+console.log(goGoGecko)
 const object = document.querySelector('.object');
-
+console.log(object)
 
 //? Functions
-
+// Add class list  
+function jump (){
+    goGoGecko.classList.add('animation');
+}
 
 
 
 //! EventListeners 
+addEventListener ('keyup', (e) =>{
+    console.log(e)
+})

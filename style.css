@@ -22,7 +22,7 @@
     animation-iteration-count: infinite;
 }
 
-.animate {
+.animation {
     animation:jump 1s;
 }
 
