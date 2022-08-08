@@ -20,7 +20,7 @@
 }
 
 .animation {
-    animation: jump 700ms;
+    animation: jump 1000ms;
 }
 
 /* great document for animations https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations */

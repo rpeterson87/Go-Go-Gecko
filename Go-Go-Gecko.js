@@ -22,21 +22,27 @@ console.log(object)
 
 
 // add player jump function 
-//? Functions
 // Add class list - 
-function jump (){
-    goGoGecko.classList.add('animation');
-    stopAnimation(function(){
+//? Functions
+
+function jump() {
+    if (goGoGecko.classList != 'animation'){
+    }
+        goGoGecko.classList.add('animation');
+        // found how to get it to reset https://www.w3schools.com/jsref/met_win_settimeout.asp
+    setTimeout(() => {
         goGoGecko.classList.remove('animation');
-    },700);
+        counter++;
+    }, 400);
+     
 }
 console.log()
 
 
 // need to figure out the keys a bit more - https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard
 //! EventListeners 
-addEventListener ('keydown', (e) =>{
+addEventListener('keydown', (e) => {
     console.log(e)
     jump()
-    stopAnimation()
+    e.preventDefault
 })
