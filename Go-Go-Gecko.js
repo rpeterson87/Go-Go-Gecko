@@ -15,7 +15,8 @@
 
 
 //* Variables
-
+const goGoGecko = document.querySelector('.character');
+const object = document.querySelector('.object');
 
 
 //? Functions

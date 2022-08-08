@@ -20,16 +20,18 @@
     animation-name: jump;
     animation-duration: 1s;
     animation-iteration-count: infinite;
-    
-
-
 }
+
+.animate {
+    animation:jump 1s;
+}
+
 /* great document for animations https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations */
 /* should be able to use top to animate up and down. tested on object. got up to work using - https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_fill-mode3 */
 
 @keyframes jump {
 
-    /* this one cause it to drop from the top */
+    /* this one causes it to drop from the top */
     0% {
         top: 480px;
         background-color: yellowgreen;
