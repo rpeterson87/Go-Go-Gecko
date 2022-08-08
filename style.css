@@ -18,15 +18,15 @@
     top: 480px;
     background-color: black;
     animation-name: jump;
-    animation-duration: 5s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    
 
 }
 
-/* should be able to use top to animate up and down. tested on object  */
+/* should be able to use top to animate up and down. tested on object. */
 @keyframes jump {
-    from {top: 0px;
+    from {top: 500px;
     background-color: yellowgreen;}
     to {top: 200px;}
 }
