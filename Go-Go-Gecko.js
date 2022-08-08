@@ -13,22 +13,30 @@
 //! The player will loose if they hit an obstacle.
 
 
-
+// add character and object variables
 //* Variables
 const goGoGecko = document.querySelector('.character');
 console.log(goGoGecko)
 const object = document.querySelector('.object');
 console.log(object)
 
+
+// add player jump function 
 //? Functions
-// Add class list  
+// Add class list - 
 function jump (){
     goGoGecko.classList.add('animation');
+    stopAnimation(function(){
+        goGoGecko.classList.remove('animation');
+    },700);
 }
+console.log()
 
 
-
+// need to figure out the keys a bit more - https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard
 //! EventListeners 
 addEventListener ('keydown', (e) =>{
     console.log(e)
+    jump()
+    stopAnimation()
 })

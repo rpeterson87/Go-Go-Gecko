@@ -10,20 +10,17 @@
     height: 500px;
     border: 5px solid blue;
 }
-
+/* had to delete animation from character in able to get keyboard events to work but it wont repeat for some reason*/
 .character {
     width: 10px;
     height: 20px;
     position: relative;
     top: 480px;
     background-color: black;
-    animation-name: jump;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
 }
 
 .animation {
-    animation:jump 1s;
+    animation: jump 700ms;
 }
 
 /* great document for animations https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations */
