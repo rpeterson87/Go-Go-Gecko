@@ -20,16 +20,22 @@
     animation-name: jump;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    
+
 
 }
 
-/* should be able to use top to animate up and down. tested on object. */
+/* should be able to use top to animate up and down. tested on object. got up to work using - https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_fill-mode3 */
 @keyframes jump {
-    from {top: 500px;
-    background-color: yellowgreen;}
-    to {top: 200px;}
+    0% {
+        top: 500px;
+        background-color: yellowgreen;
+    }
+
+    25% {
+        top: 400px;
+    }
 }
+
 /* Need to add animation - found https://www.w3schools.com/css/css3_animations.asp */
 
 .object {
