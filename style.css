@@ -26,13 +26,26 @@
 
 /* should be able to use top to animate up and down. tested on object. got up to work using - https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_fill-mode3 */
 @keyframes jump {
+    /* this one cause it to drop from the top */
     0% {
-        top: 500px;
+        top: 480px;
         background-color: yellowgreen;
     }
+/* This one causes a long pause */
+    30% {
+        top: 300px;
+    }
 
-    25% {
-        top: 400px;
+    55% {
+        top: 300px;
+    }
+
+    65%{
+        top: 480px;
+    }
+    /* match the px from the character */
+    100%{
+        top: 480px;
     }
 }
 
