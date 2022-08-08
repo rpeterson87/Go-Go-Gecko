@@ -18,12 +18,13 @@
     top: 480px;
     background-color: black;
     animation-name: jump;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
+    
 
 
 }
-
+/* great document for animations https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations */
 /* should be able to use top to animate up and down. tested on object. got up to work using - https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_fill-mode3 */
 
 @keyframes jump {
@@ -36,16 +37,16 @@
 
     /* This one causes a long pause */
     30% {
-        top: 400px;
+        top: 410px;
     }
 
     /* This one reduces the height of the jump */
     40% {
-        top: 380px;
+        top: 410px;
     }
     /* This one will hold it in the air longer */
     60% {
-        top: 380px;
+        top: 410px;
     }
 
     /* match the px from the character */
