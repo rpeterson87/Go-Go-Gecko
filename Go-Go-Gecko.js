@@ -29,6 +29,6 @@ function jump (){
 
 
 //! EventListeners 
-addEventListener ('keyup', (e) =>{
+addEventListener ('keydown', (e) =>{
     console.log(e)
 })
