@@ -35,24 +35,28 @@ function jump() {
     setTimeout(() => {
         goGoGecko.classList.remove('animation');
 
-    }, 500);
+    },500);
 
 }
 
 
 // need to set up the hit detection 
 const findHit = setInterval(function () {
+    // this is returning the value of the top of the character
     let goGoGeckoTop =
         parseInt(window.getComputedStyle(goGoGecko).getPropertyValue('top'))
+    // This is the objects moving from right to left and it is what gets the value of left by using the paresInt and then grabbing the css values using window.getComputedStyle
     let objectLeft =
         parseInt(window.getComputedStyle(object).getPropertyValue('left'))
     console.log(objectLeft)
+    // This is what tells the computer that the two objects have hit each other. By checking their position on the canvas. 
     if (objectLeft < 10 && objectLeft > 0 && goGoGeckoTop >= 480) {
         object.style.animation = "none";
         object.style.display = "none";
-        myElm.innerHTML = 'test';
+        myElm.innerHTML = 'Game Over';
         myElm.style.color = 'red';
         document.body.appendChild(myElm)
+        console.log(objectLeft)
     }
 }, 10);
 
