@@ -16,9 +16,11 @@
 // add character and object variables
 //* Variables
 const goGoGecko = document.querySelector('.character');
-console.log(goGoGecko)
+console.log(goGoGecko);
 const object = document.querySelector('.object');
-console.log(object)
+console.log(object);
+const gameOver = document.querySelector('.game-over');
+let myElm = document.createElement('p')
 
 
 // add player jump function 
@@ -26,31 +28,37 @@ console.log(object)
 //? Functions
 
 function jump() {
-    if (goGoGecko.classList != 'animation'){
+    if (goGoGecko.classList != 'animation') {
     }
-        goGoGecko.classList.add('animation');
-        // found how to get it to reset https://www.w3schools.com/jsref/met_win_settimeout.asp
+    goGoGecko.classList.add('animation');
+    // found how to get it to reset https://www.w3schools.com/jsref/met_win_settimeout.asp
     setTimeout(() => {
         goGoGecko.classList.remove('animation');
-        
+
     }, 500);
-     
+
 }
 
+
 // need to set up the hit detection 
-const findHit = setInterval(function(){
+const findHit = setInterval(function () {
     let goGoGeckoTop =
-    parseInt(window.getComputedStyle(goGoGecko).getPropertyValue('top'))
+        parseInt(window.getComputedStyle(goGoGecko).getPropertyValue('top'))
     let objectLeft =
-    parseInt(window.getComputedStyle(object).getPropertyValue('left'))
+        parseInt(window.getComputedStyle(object).getPropertyValue('left'))
     console.log(objectLeft)
-    if(objectLeft <10 && objectLeft>0 && goGoGeckoTop>=400){
+    if (objectLeft < 10 && objectLeft > 0 && goGoGeckoTop >= 480) {
         object.style.animation = "none";
         object.style.display = "none";
-    }   
+        myElm.innerHTML = 'test';
+        myElm.style.color = 'red';
+        document.body.appendChild(myElm)
+    }
+}, 10);
 
-},10);
-
+// function gameOver (){
+//     document.querySelector('.game-over').style.display = 'none';
+// }
 
 // need to figure out the keys a bit more - https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard
 //! EventListeners 
@@ -58,4 +66,4 @@ addEventListener('keydown', (e) => {
     console.log(e)
     jump()
     e.preventDefault
-})
+});

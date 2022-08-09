@@ -10,6 +10,7 @@
     height: 500px;
     border: 5px solid blue;
 }
+
 /* had to delete animation from character in able to get keyboard events to work but it wont repeat for some reason*/
 .character {
     width: 10px;
@@ -43,6 +44,7 @@
     40% {
         top: 410px;
     }
+
     /* This one will hold it in the air longer */
     60% {
         top: 410px;
