@@ -17,10 +17,11 @@
 //* Variables
 const goGoGecko = document.querySelector('.character');
 const object = document.querySelector('.object');
-const gameOver = document.querySelector('.game-over');
+// const gameOver = document.querySelector('.game-over');
 const alert = document.getElementById('game-over')
-let myElm = document.createElement('p')
-let gameEnd = false;
+let score = 0;
+// let myElm = document.createElement('p')
+// let gameEnd = false;
 
 
 
@@ -35,14 +36,22 @@ function jump() {
     // found how to get it to reset https://www.w3schools.com/jsref/met_win_settimeout.asp
     setTimeout(() => {
         goGoGecko.classList.remove('animation');
+        score++;
     }, 500);
 
 }
 // set timer for win
-// function start(){
-//     let timer = seconds;
-// }
-
+function start(){
+    let timer = seconds;
+}
+function randomObject(){
+    let randomTime = Math.random() * 3000
+    let obstaclePosition = 980;
+    object.document.createElement('div')
+    if(!alert) object.classList.add('object')
+    game.appendChild('object')
+    object.style.left = obstaclePosition + randomTime
+}
 
 // need to set up the hit detection 
 const findHit = setInterval(function () {  
@@ -59,8 +68,9 @@ const findHit = setInterval(function () {
         // myElm.innerHTML = 'Game Over';
         // myElm.style.color = 'red';
         // document.body.appendChild(myElm)
-        alert.innerHTML = 'Game Over'
-        gameEnd = true;
+        alert.innerHTML = `Game Over! Your Score was ${score}`
+        alert.style.color = 'red'
+        // gameEnd = true;
     }
     
 }, 10);
