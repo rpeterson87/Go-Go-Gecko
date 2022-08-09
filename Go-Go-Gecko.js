@@ -16,11 +16,10 @@
 // add character and object variables
 //* Variables
 const goGoGecko = document.querySelector('.character');
-console.log(goGoGecko);
 const object = document.querySelector('.object');
-console.log(object);
 const gameOver = document.querySelector('.game-over');
 let myElm = document.createElement('p')
+let jumping = false;
 
 
 // add player jump function 
@@ -34,21 +33,23 @@ function jump() {
     // found how to get it to reset https://www.w3schools.com/jsref/met_win_settimeout.asp
     setTimeout(() => {
         goGoGecko.classList.remove('animation');
-
-    },500);
+    }, 500);
 
 }
+// set timer for win
+// function start(){
+//     let timer = seconds;
+// }
 
 
 // need to set up the hit detection 
-const findHit = setInterval(function () {
+const findHit = setInterval(function () {  
     // this is returning the value of the top of the character
     let goGoGeckoTop =
         parseInt(window.getComputedStyle(goGoGecko).getPropertyValue('top'))
     // This is the objects moving from right to left and it is what gets the value of left by using the paresInt and then grabbing the css values using window.getComputedStyle
     let objectLeft =
         parseInt(window.getComputedStyle(object).getPropertyValue('left'))
-    console.log(objectLeft)
     // This is what tells the computer that the two objects have hit each other. By checking their position on the canvas relative to each other.
     if (objectLeft < 90 && objectLeft > 0 && goGoGeckoTop >= 480) {
         object.style.animation = "none";
@@ -56,9 +57,10 @@ const findHit = setInterval(function () {
         myElm.innerHTML = 'Game Over';
         myElm.style.color = 'red';
         document.body.appendChild(myElm)
-        console.log(objectLeft)
     }
+    
 }, 10);
+
 
 // function gameOver (){
 //     document.querySelector('.game-over').style.display = 'none';
@@ -67,7 +69,8 @@ const findHit = setInterval(function () {
 // need to figure out the keys a bit more - https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard
 //! EventListeners 
 addEventListener('keydown', (e) => {
-    console.log(e)
-    jump()
+    if (e.keyCode === 32){
+        jump()
+    }
     e.preventDefault
 });
