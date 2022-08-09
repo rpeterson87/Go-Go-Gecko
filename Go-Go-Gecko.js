@@ -23,7 +23,12 @@ let score = 0;
 // let myElm = document.createElement('p')
 // let gameEnd = false;
 
-
+// setTimeout(()=> {
+//     score++
+    setInterval(() =>{
+        score++ 
+    },3000)
+// },1000);
 
 // add player jump function 
 // Add class list - 
@@ -36,7 +41,7 @@ function jump() {
     // found how to get it to reset https://www.w3schools.com/jsref/met_win_settimeout.asp
     setTimeout(() => {
         goGoGecko.classList.remove('animation');
-        score++;
+        // score++;
     }, 500);
 
 }
@@ -62,7 +67,7 @@ const findHit = setInterval(function () {
     let objectLeft =
         parseInt(window.getComputedStyle(object).getPropertyValue('left'))
     // This is what tells the computer that the two objects have hit each other. By checking their position on the canvas relative to each other.
-    if (objectLeft < 90 && objectLeft > 0 && goGoGeckoTop >= 480) {
+    if (objectLeft < 90 && objectLeft > 0 && goGoGeckoTop >= 430) {
         object.style.animation = "none";
         object.style.display = "none";
         // myElm.innerHTML = 'Game Over';
@@ -70,6 +75,7 @@ const findHit = setInterval(function () {
         // document.body.appendChild(myElm)
         alert.innerHTML = `Game Over! Your Score was ${score}`
         alert.style.color = 'red'
+        score = 0;
         // gameEnd = true;
     }
     

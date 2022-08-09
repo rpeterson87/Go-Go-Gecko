@@ -9,6 +9,8 @@
     width: 900px;
     height: 500px;
     border: 5px solid blue;
+    background-image: url(https://i.imgur.com/YE49ksd.jpg);
+    background-size: cover;
 }
 
 /* had to delete animation from character in able to get keyboard events to work but it wont repeat for some reason*/
@@ -16,7 +18,7 @@
     width: 10px;
     height: 20px;
     position: relative;
-    top: 480px;
+    top: 430px;
     
 
 }
@@ -32,27 +34,27 @@
 
     /* this one causes it to drop from the top */
     0% {
-        top: 480px;
+        top: 430px;
     }
 
     /* This one causes a long pause */
     30% {
-        top: 410px;
+        top: 380px;
     }
 
     /* This one reduces the height of the jump */
     40% {
-        top: 410px;
+        top: 380px;
     }
 
     /* This one will hold it in the air longer */
     60% {
-        top: 410px;
+        top: 380px;
     }
 
     /* match the px from the character */
     100% {
-        top: 480px;
+        top: 430px;
     }
 }
 
@@ -62,7 +64,7 @@
     width: 10px;
     height: 20px;
     position: relative;
-    top: 460px;
+    top: 415px;
     left: 890px;
     background-color: dimgrey;
     animation-name: object;
@@ -82,7 +84,6 @@
         left: -100px;
     }
 }
-
 
 .title-screen {
     width: 950px;
@@ -104,3 +105,9 @@
     position: absolute;
 }
  
+
+.game-background {
+    width: 20;
+    height: 40;
+
+}
