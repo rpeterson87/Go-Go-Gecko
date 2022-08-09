@@ -73,20 +73,20 @@
 /* can send objects from the top corners at the player using top: 0px Might want to add that feature? */
 @keyframes object {
     0% {
-        left: 900px;
+        left: 910px;
         background-color: yellow;
     }
 
     /* this at anything lower then 100% makes a pong affect */
     100% {
-        left: -80px;
+        left: -100px;
     }
 }
 
 
 .title-screen {
-    width: 400px;
-    height: 400px;
+    width: 950px;
+    height: 200px;
 }
 
 .gecko {
@@ -94,5 +94,13 @@
     height: 70px;
     top: -26px;
     position: relative;
+}
+
+.cactus {
+    width: 60px;
+    height: 40px;
+    top: -20px;
+    right: -20px;
+    position: absolute;
 }
  
