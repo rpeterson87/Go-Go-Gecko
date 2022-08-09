@@ -18,8 +18,10 @@
 const goGoGecko = document.querySelector('.character');
 const object = document.querySelector('.object');
 const gameOver = document.querySelector('.game-over');
+const alert = document.getElementById('game-over')
 let myElm = document.createElement('p')
-let jumping = false;
+let gameEnd = false;
+
 
 
 // add player jump function 
@@ -54,9 +56,11 @@ const findHit = setInterval(function () {
     if (objectLeft < 90 && objectLeft > 0 && goGoGeckoTop >= 480) {
         object.style.animation = "none";
         object.style.display = "none";
-        myElm.innerHTML = 'Game Over';
-        myElm.style.color = 'red';
-        document.body.appendChild(myElm)
+        // myElm.innerHTML = 'Game Over';
+        // myElm.style.color = 'red';
+        // document.body.appendChild(myElm)
+        alert.innerHTML = 'Game Over'
+        gameEnd = true;
     }
     
 }, 10);
