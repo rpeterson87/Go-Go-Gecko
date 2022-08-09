@@ -17,7 +17,7 @@
     height: 20px;
     position: relative;
     top: 480px;
-    background-color: black;
+    
 
 }
 
@@ -33,7 +33,6 @@
     /* this one causes it to drop from the top */
     0% {
         top: 480px;
-        background-color: yellowgreen;
     }
 
     /* This one causes a long pause */
@@ -84,7 +83,16 @@
     }
 }
 
+
 .title-screen {
     width: 400px;
     height: 400px;
 }
+
+.gecko {
+    width: 100px;
+    height: 70px;
+    top: -26px;
+    position: relative;
+}
+ 

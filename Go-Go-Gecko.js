@@ -49,8 +49,8 @@ const findHit = setInterval(function () {
     let objectLeft =
         parseInt(window.getComputedStyle(object).getPropertyValue('left'))
     console.log(objectLeft)
-    // This is what tells the computer that the two objects have hit each other. By checking their position on the canvas. 
-    if (objectLeft < 10 && objectLeft > 0 && goGoGeckoTop >= 480) {
+    // This is what tells the computer that the two objects have hit each other. By checking their position on the canvas relative to each other.
+    if (objectLeft < 90 && objectLeft > 0 && goGoGeckoTop >= 480) {
         object.style.animation = "none";
         object.style.display = "none";
         myElm.innerHTML = 'Game Over';
