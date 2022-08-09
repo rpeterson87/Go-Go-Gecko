@@ -32,11 +32,24 @@ function jump() {
         // found how to get it to reset https://www.w3schools.com/jsref/met_win_settimeout.asp
     setTimeout(() => {
         goGoGecko.classList.remove('animation');
-        counter++;
-    }, 400);
+        
+    }, 500);
      
 }
-console.log()
+
+// need to set up the hit detection 
+const findHit = setInterval(function(){
+    let goGoGeckoTop =
+    parseInt(window.getComputedStyle(goGoGecko).getPropertyValue('top'))
+    let objectLeft =
+    parseInt(window.getComputedStyle(object).getPropertyValue('left'))
+    console.log(objectLeft)
+    if(objectLeft <10 && objectLeft>0 && goGoGeckoTop>=400){
+        object.style.animation = "none";
+        object.style.display = "none";
+    }   
+
+},10);
 
 
 // need to figure out the keys a bit more - https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard
