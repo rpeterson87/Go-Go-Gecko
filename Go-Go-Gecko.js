@@ -23,11 +23,13 @@ let score = 0;
 // let myElm = document.createElement('p')
 // let gameEnd = false;
 
+
+//! set timer for score 
 // setTimeout(()=> {
 //     score++
-    setInterval(() =>{
-        score++ 
-    },3000)
+setInterval(() => {
+    score++
+}, 3000)
 // },1000);
 
 // add player jump function 
@@ -45,21 +47,19 @@ function jump() {
     }, 500);
 
 }
-// set timer for win
-function start(){
-    let timer = seconds;
-}
-function randomObject(){
-    let randomTime = Math.random() * 3000
-    let obstaclePosition = 980;
-    object.document.createElement('div')
-    if(!alert) object.classList.add('object')
-    game.appendChild('object')
-    object.style.left = obstaclePosition + randomTime
-}
+
+
+// function randomObject() {
+//     let randomTime = Math.random() * 3000
+//     let obstaclePosition = 980;
+//     object.document.createElement('div')
+//     if (!alert) object.classList.add('object')
+//     game.appendChild('object')
+//     object.style.left = obstaclePosition + randomTime
+// }
 
 // need to set up the hit detection 
-const findHit = setInterval(function () {  
+const findHit = setInterval(function () {
     // this is returning the value of the top of the character
     let goGoGeckoTop =
         parseInt(window.getComputedStyle(goGoGecko).getPropertyValue('top'))
@@ -68,17 +68,16 @@ const findHit = setInterval(function () {
         parseInt(window.getComputedStyle(object).getPropertyValue('left'))
     // This is what tells the computer that the two objects have hit each other. By checking their position on the canvas relative to each other.
     if (objectLeft < 90 && objectLeft > 0 && goGoGeckoTop >= 430) {
+        // this removes the animation on contact with the character
         object.style.animation = "none";
+        // this removes the item from the screen after contact with the character
         object.style.display = "none";
-        // myElm.innerHTML = 'Game Over';
-        // myElm.style.color = 'red';
-        // document.body.appendChild(myElm)
+        console.log(object.style)
+        // these add a popup to the H2 in html for player alert and set the color of the text. 
         alert.innerHTML = `Game Over! Your Score was ${score}`
         alert.style.color = 'red'
-        score = 0;
-        // gameEnd = true;
     }
-    
+
 }, 10);
 
 
@@ -89,8 +88,10 @@ const findHit = setInterval(function () {
 // need to figure out the keys a bit more - https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard
 //! EventListeners 
 addEventListener('keydown', (e) => {
-    if (e.keyCode === 32){
+    if (e.keyCode === 32) {
         jump()
     }
     e.preventDefault
 });
+
+

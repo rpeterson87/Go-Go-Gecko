@@ -11,6 +11,8 @@
     border: 5px solid blue;
     background-image: url(https://i.imgur.com/YE49ksd.jpg);
     background-size: cover;
+
+
 }
 
 /* had to delete animation from character in able to get keyboard events to work but it wont repeat for some reason*/
@@ -19,7 +21,7 @@
     height: 20px;
     position: relative;
     top: 430px;
-    
+
 
 }
 
@@ -104,7 +106,7 @@
     right: -20px;
     position: absolute;
 }
- 
+
 
 .game-background {
     width: 20;
