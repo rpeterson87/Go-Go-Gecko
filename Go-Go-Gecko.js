@@ -19,6 +19,7 @@ const goGoGecko = document.querySelector('.character');
 const object = document.querySelector('.object');
 const alert = document.getElementById('game-over')
 let score = 0;
+let audio = new Audio('')
 
 
 //! set timer for score 
