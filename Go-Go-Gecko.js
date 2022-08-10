@@ -64,7 +64,7 @@ const findHit = setInterval(function () {
         // this removes the item from the screen after contact with the character
         object.style.display = "none";
         // these add a popup to the H2 in html for player alert and set the color of the text. 
-        alert.innerHTML = `Game Over! Your Score was ${score}`
+        alert.innerHTML = `Game Over! Your Score Was ${score}`
         alert.style.color = 'red'
     }
 }, 10);
