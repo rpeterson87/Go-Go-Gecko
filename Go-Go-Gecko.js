@@ -17,46 +17,37 @@
 //* Variables
 const goGoGecko = document.querySelector('.character');
 const object = document.querySelector('.object');
-// const gameOver = document.querySelector('.game-over');
 const alert = document.getElementById('game-over')
 let score = 0;
-// let myElm = document.createElement('p')
-// let gameEnd = false;
 
 
 //! set timer for score 
-// setTimeout(()=> {
-//     score++
+// this tracks how many secs have passed. If 3 seconds have passed it will add a score of one to variable score.
 setInterval(() => {
     score++
 }, 3000)
-// },1000);
 
-// add player jump function 
-// Add class list - 
+
+
+
 //? Functions
 
+// Add class list - animation class in css
+// add player jump function 
 function jump() {
+    // this checks to see if the animation class is present = true
     if (goGoGecko.classList != 'animation') {
     }
+    // if the above is true it adds the animation
     goGoGecko.classList.add('animation');
     // found how to get it to reset https://www.w3schools.com/jsref/met_win_settimeout.asp
+    // then after the time allotted it removes the animation class.
     setTimeout(() => {
         goGoGecko.classList.remove('animation');
-        // score++;
     }, 500);
 
 }
 
-
-// function randomObject() {
-//     let randomTime = Math.random() * 3000
-//     let obstaclePosition = 980;
-//     object.document.createElement('div')
-//     if (!alert) object.classList.add('object')
-//     game.appendChild('object')
-//     object.style.left = obstaclePosition + randomTime
-// }
 
 // need to set up the hit detection 
 const findHit = setInterval(function () {
@@ -72,7 +63,6 @@ const findHit = setInterval(function () {
         object.style.animation = "none";
         // this removes the item from the screen after contact with the character
         object.style.display = "none";
-        console.log(object.style)
         // these add a popup to the H2 in html for player alert and set the color of the text. 
         alert.innerHTML = `Game Over! Your Score was ${score}`
         alert.style.color = 'red'
@@ -81,12 +71,12 @@ const findHit = setInterval(function () {
 }, 10);
 
 
-// function gameOver (){
-//     document.querySelector('.game-over').style.display = 'none';
-// }
+
+
 
 // need to figure out the keys a bit more - https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard
 //! EventListeners 
+// This listens for the spacebar to be pressed. Then invokes the jump function
 addEventListener('keydown', (e) => {
     if (e.keyCode === 32) {
         jump()
