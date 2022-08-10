@@ -2,20 +2,21 @@
 /* add p tag styling  */
 /* add obstacle and position styling */
 /* add text color and styling */
-.title-screen{
-   display: flex;
-   align-self: center;
-   
-}
+
 
 body {
     display: flex;
     flex-direction: column;
     align-self: center;
     border: 5px solid black;
-    
+    position: relative;
 }
 
+.title-screen{ 
+   display: flex;
+   align-self: center;
+   
+}
 
 .game {
     align-self: center;
@@ -27,8 +28,7 @@ body {
     background-image: url(https://i.imgur.com/YE49ksd.jpg);
     background-size: cover;
     overflow: hidden;
-
-
+    position: relative;
 }
 
 /* had to delete animation from character in able to get keyboard events to work but it wont repeat for some reason*/
@@ -65,7 +65,7 @@ body {
         top: 380px;
     }
 
-    /* This one will hold it in the air longer */
+    /* This one will hold jump in the air longer */
     60% {
         top: 380px;
     }
@@ -129,4 +129,13 @@ body {
 .game-background {
     width: 20;
     height: 40;
+}
+
+.button-wrapper{
+    display:block;
+
+    width:40px;
+    height:40px;
+    margin: 0 auto;
+    top:20px;
 }
