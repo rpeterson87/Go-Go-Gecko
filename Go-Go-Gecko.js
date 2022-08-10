@@ -19,11 +19,10 @@ const goGoGecko = document.querySelector('.character');
 const object = document.querySelector('.object');
 const alert = document.getElementById('game-over')
 let score = 0;
-let audio = new Audio('')
 
 
 //! set timer for score 
-// this tracks how many secs have passed. If 3 seconds have passed it will add a score of one to variable score.
+// this tracks how many secs have passed. If 3 seconds have passed it will add a score of 1 to variable score.
 setInterval(() => {
     score++
 }, 3000)
@@ -68,11 +67,7 @@ const findHit = setInterval(function () {
         alert.innerHTML = `Game Over! Your Score was ${score}`
         alert.style.color = 'red'
     }
-
 }, 10);
-
-
-
 
 
 // need to figure out the keys a bit more - https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard

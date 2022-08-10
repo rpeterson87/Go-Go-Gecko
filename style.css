@@ -11,9 +11,8 @@ body {
     position: relative;
 }
 
-.title-screen{ 
-   align-self: center;
-   
+.title-screen {
+    align-self: center;
 }
 
 .game {
@@ -36,8 +35,6 @@ body {
     height: 20px;
     position: relative;
     top: 430px;
-
-
 }
 
 .animation {
@@ -92,8 +89,7 @@ body {
 /* can send objects from the top corners at the player using top: 0px Might want to add that feature? */
 @keyframes object {
     0% {
-        /* this affects where the object starts on the canvas from the right side. Yes its backwards ¯\_(ツ)_/¯
- */
+        /* this affects where the object starts on the canvas from the right side. Yes its backwards ¯\_(ツ)_/¯*/
         left: 890px;
         background-color: yellow;
     }
@@ -101,7 +97,7 @@ body {
     /* this at anything lower then 100% makes a pong affect */
     100% {
         left: -100px;
-    } 
+    }
 }
 
 .title-screen {
@@ -130,15 +126,15 @@ body {
     height: 40;
 }
 
-.button-wrapper{
-    display:block;
-    width:40px;
-    height:40px;
+.button-wrapper {
+    display: block;
+    width: 40px;
+    height: 40px;
     margin: 0 auto;
-    top:20px;
+    top: 20px;
 }
-#game-over{
-    
+
+#game-over {
     margin-top: 75px;
     margin-left: 300px;
 }
