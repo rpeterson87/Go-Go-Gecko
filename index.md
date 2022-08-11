@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+# Go-Go-Gecko
 
-You can use the [editor on GitHub](https://github.com/rpeterson87/Go-Go-Gecko/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This game is a spin off of the classic browser game T-Rex run. It is a simple game where you have have to avoid the objects coming at you by jumping over them. I decided to make it about a Gecko because I used to breading Reptiles and Amphibians and it was something I really enjoyed! 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Screen shots
+ Below are screen shots of the games development
+ 
+ Step 1. Build the wire-frame
 
-### Markdown
+ <img width="400" alt="Screen Shot 2022-08-07 at 8 41 58 PM" src="https://user-images.githubusercontent.com/9807461/184040251-3f35dc1c-00eb-4852-a521-96bc08db60da.png">
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Step 2. Define the divs move character & object to the bottom left
 
-```markdown
-Syntax highlighted code block
+<a href="https://imgur.com/zCxyy7o"><img width="400" src="https://i.imgur.com/zCxyy7o.png" title="source: imgur.com" /></a>
 
-# Header 1
-## Header 2
-### Header 3
+Step 3. The finale product 
 
-- Bulleted
-- List
+<a href="https://imgur.com/Um7ecNI"><img width="400" src="https://i.imgur.com/Um7ecNI.png" title="source: imgur.com" /></a>
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+To build this I used: Java Script, CSS & HTML 
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+☐ Getting Started: In this section include the link to your deployed game and any instructions you deem important.
 
-### Jekyll Themes
+☐ Next Steps: Planned future enhancements (icebox items).
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rpeterson87/Go-Go-Gecko/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Note: Don't underestimate the value of a well-crafted README.md. The README.md introduces your project to prospective employers and forms their first impression of your work!
