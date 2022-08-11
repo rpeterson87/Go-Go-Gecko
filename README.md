@@ -34,7 +34,7 @@ I then used JavaScript to handle the functionality side of the game. I started o
 
 # Getting Started:
 
-How to play the game: the game is controlled by using the spacebar to jump over the cactus. If are succseful in clearing the cactus that counts as one point. If you hit the cactus it will result in a game over. To play again just click the reset button.
+How to play the game: The game is controlled by using the spacebar to jump over the cactus. If are successful in clearing the cactus that counts as one point. If you hit the cactus it will result in a game over. To play again just click the reset button.
 
 https://rpeterson87.github.io/Go-Go-Gecko/
 
