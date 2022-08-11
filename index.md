@@ -21,8 +21,4 @@ Step 3. The finale product
 To build this I used: Java Script, CSS & HTML 
 
 
-☐ Getting Started: In this section include the link to your deployed game and any instructions you deem important.
-
-☐ Next Steps: Planned future enhancements (icebox items).
-
-Note: Don't underestimate the value of a well-crafted README.md. The README.md introduces your project to prospective employers and forms their first impression of your work!
+I would like to add multiple objects to jump over. I would also like to be able to move the gecko forward and backwards on the screen. I would then like to add music and sound effects to the game.
