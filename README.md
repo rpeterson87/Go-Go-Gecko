@@ -20,6 +20,7 @@ Step 3. The finale product
 
 To build this I used: Java Script, CSS & HTML 
 
+Git hub page
 https://rpeterson87.github.io/Go-Go-Gecko/
 
 I would like to add multiple objects to jump over. I would also like to be able to move the gecko forward and backwards on the screen. I would then like to add music and sound effects to the game.
