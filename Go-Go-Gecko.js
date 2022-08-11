@@ -8,7 +8,7 @@
 
 //? Need to setup how to win/lose:
 
-//! The player will win by not hitting any obstacles for 15sec
+//! The player will win by not hitting any obstacles for 15sec - this still needs to be added
 
 //! The player will loose if they hit an obstacle.
 
@@ -21,16 +21,14 @@ const alert = document.getElementById('game-over')
 let score = 0;
 
 
+
+//? Functions
+
 //! set timer for score 
 // this tracks how many secs have passed. If 3 seconds have passed it will add a score of 1 to variable score.
 setInterval(() => {
     score++
 }, 3000)
-
-
-
-
-//? Functions
 
 // Add class list - animation class in css
 // add player jump function 
