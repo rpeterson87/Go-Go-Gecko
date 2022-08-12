@@ -16,8 +16,8 @@
 // add character and object variables
 //* Variables
 const goGoGecko = document.querySelector('.character');
-const object = document.querySelector('.object');
-const alert = document.getElementById('game-over')
+const cactus = document.querySelector('.object');
+const alert = document.getElementById('game-over');
 let score = 0;
 
 
@@ -25,10 +25,10 @@ let score = 0;
 //? Functions
 
 //! set timer for score 
-// this tracks how many secs have passed. If 3 seconds have passed it will add a score of 1 to variable score.
+// this tracks how many secs have passed. If 3 seconds have passed it will add a score of 1 to the variable score.
 setInterval(() => {
     score++
-}, 3000)
+}, 3000);
 
 // Add class list - animation class in css
 // add player jump function 
@@ -44,26 +44,26 @@ function jump() {
         goGoGecko.classList.remove('animation');
     }, 500);
 
-}
+};
 
 
 // need to set up the hit detection 
 const findHit = setInterval(function () {
     // this is returning the value of the top of the character
     let goGoGeckoTop =
-        parseInt(window.getComputedStyle(goGoGecko).getPropertyValue('top'))
+        parseInt(window.getComputedStyle(goGoGecko).getPropertyValue('top'));
     // This is the objects moving from right to left and it is what gets the value of left by using the paresInt and then grabbing the css values using window.getComputedStyle
-    let objectLeft =
-        parseInt(window.getComputedStyle(object).getPropertyValue('left'))
+    let cactusLeft =
+        parseInt(window.getComputedStyle(cactus).getPropertyValue('left'));
     // This is what tells the computer that the two objects have hit each other. By checking their position on the canvas relative to each other.
-    if (objectLeft < 90 && objectLeft > 0 && goGoGeckoTop >= 430) {
+    if (cactusLeft < 90 && cactusLeft > 0 && goGoGeckoTop >= 430) {
         // this removes the animation on contact with the character
-        object.style.animation = "none";
+        cactus.style.animation = "none";
         // this removes the item from the screen after contact with the character
-        object.style.display = "none";
+        cactus.style.display = "none";
         // these add a popup to the H2 in html for player alert and set the color of the text. 
-        alert.innerHTML = `Game Over! Your Score Was ${score}`
-        alert.style.color = 'red'
+        alert.innerHTML = `Game Over! Your Score Was ${score}`;
+        alert.style.color = 'red';
     }
 }, 10);
 
@@ -75,7 +75,7 @@ addEventListener('keydown', (e) => {
     if (e.keyCode === 32) {
         jump()
     }
-    e.preventDefault
+    e.preventDefault;
 });
 
 
